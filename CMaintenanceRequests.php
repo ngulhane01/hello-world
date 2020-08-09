@@ -994,8 +994,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 								\'' . $arrstrProductName[\CPsProduct::ENTRATA_PAAS] . '\'
 							WHEN vmr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 								\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-							WHEN vmr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-								\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 						END AS origin,
 						vmr.main_phone_number_type_id,
 						vmr.alt_phone_number_type_id,
@@ -3787,8 +3785,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 									\'' . $arrstrProductName[\CPsProduct::ENTRATA_PAAS] . '\'
 								WHEN mr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 									\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-								WHEN mr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-									\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 							END AS origin,
 							ms.maintenance_status_type_id,
 							COALESCE( CASE WHEN us.building_name IS NOT NULL 
@@ -3981,8 +3977,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 								\'' . $arrstrProductName[\CPsProduct::ENTRATAMATION] . '\'
 							WHEN vmr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 								\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-							WHEN vmr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-								\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 						END AS origin,
 						COALESCE(us.unit_number_cache, pu.unit_number, cl.unit_number_cache, vmr.unit_number) AS unit_number_cache,
 						vmr.maintenance_request_type_id,
@@ -5062,8 +5056,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 								\'' . $arrstrProductName[\CPsProduct::ENTRATAMATION] . '\'
 							WHEN vmr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 								\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-							WHEN vmr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-								\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 						END AS origin,
 						vmr.maintenance_request_type_id,
 						cev.start_datetime AS calendar_start_datetime,
@@ -5200,8 +5192,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 								\'' . $arrstrProductName[\CPsProduct::ENTRATAMATION] . '\'
 							WHEN vmr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 								\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-							WHEN vmr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-								\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 						END AS origin,
 						CASE WHEN ml.is_system = 1 THEN NULL
 							WHEN puml.name IS NOT NULL THEN util_get_translated( \'name\', puml.name, puml.details )
@@ -5917,8 +5907,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 								\'' . $arrstrProductName[\CPsProduct::ENTRATAMATION] . '\'
 							WHEN vmr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 								\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-							WHEN vmr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-								\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 						END AS origin
 					FROM
 						view_maintenance_requests vmr
@@ -6282,8 +6270,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 							\'' . $arrstrProductName[\CPsProduct::ENTRATA_MOBILE_MAINTENANCE] . '\'
 						WHEN mr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 							\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-						WHEN mr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-							\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 					END AS origin,
 					substring( mrd.unit_number, \'^[0-9]+\')::numeric AS unit_nos
 				FROM maintenance_requests mr ';
@@ -7761,8 +7747,6 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 								\'' . $arrstrProductName[\CPsProduct::ENTRATA_MOBILE_MAINTENANCE] . '\'
 							WHEN mr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 								\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-							WHEN mr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-								\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
 						END AS origin,
 						cev.start_datetime AS calendar_start_datetime,
 						cev.end_datetime AS calendar_end_datetime,
