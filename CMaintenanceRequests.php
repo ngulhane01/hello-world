@@ -994,8 +994,8 @@ class CMaintenanceRequests extends \Psi\Eos\CEosPluralBase {
 								\'' . $arrstrProductName[\CPsProduct::ENTRATA_PAAS] . '\'
 							WHEN vmr.ps_product_id = ' . \CPsProduct::JOB_COSTING . ' THEN
 								\'' . $arrstrProductName[\CPsProduct::JOB_COSTING] . '\'
-							WHEN vmr.ps_product_id = ' . \CPsProduct::RESERVATION_HUB . ' THEN
-								\'' . $arrstrProductName[\CPsProduct::RESERVATION_HUB] . '\'
+							WHEN vmr.ps_product_id = ' . \CPsProduct::RESERVATION_pUB . ' THEN
+								\'' . $arrstrProductName[\CPsProduct::RESERVATION_-PUB] . '\'
 						END AS origin,
 						vmr.main_phone_number_type_id,
 						vmr.alt_phone_number_type_id,
